@@ -1,0 +1,70 @@
+.card {
+    position: relative;
+    width: 100%;
+    height: 255px;
+    
+    
+  
+     .card-image {
+    width: 100%;      
+    height: 100%;
+    border-radius: 10px;
+
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,#FFFFFF00, #000000);
+  }
+  
+     .card-title {
+    position: absolute;
+    width: 130px;
+    margin:20px;
+    bottom: 20px;
+    left: 0;
+    color: white;
+    text-align: center;
+    @include typo(white);
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+    .card {
+        width: auto;
+    }
+}
+@media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+
+.card {
+    width: auto;
+    max-width: 190px;
+}
+}
+
+@media only screen and (min-width: $medium-screen) {
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+}
+
+@media only screen and (min-width: $large-screen) {
+    .card {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+
+
+
+
+
+

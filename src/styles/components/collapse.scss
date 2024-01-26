@@ -1,0 +1,44 @@
+.collapse {
+    width: 100%;
+    display:flex ;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .item {
+    border-radius: 5px;
+    background: var(--Red, #FF6060);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+        @include typo(white);
+        font-size: 13px;
+        display: flex;
+        height: 30px;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    }
+}
+
+.arrow {
+    font-size: 24px;
+    color: white;
+}
+
+.description {
+    @include typo (white);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+.descriptionshow {
+    @include typo (white);
+    height: auto;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+}

@@ -1,0 +1,51 @@
+.Banner {
+    height: 111px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    @media screen and (min-width: $medium-screen) {
+        
+    }
+
+
+    .banner-overlay {
+    opacity: 0.3;
+    background: #000;
+    width: 100%;
+    height: 111px;
+    position: absolute;
+    border-radius: 10px;
+
+    }
+
+    .ImgBanner {
+    width: 100%;
+    object-fit:cover;
+    height: 111px;
+    border-radius: 10px;
+    }
+
+    .BannerTitle {
+    padding-left: 16px;
+    position: absolute;
+    @include typo(white);
+    width: 217px;
+    height: 48px;
+    text-align: left; 
+    @media screen and (max-width: 350px) {
+        font-size: 18px;
+        
+    }
+    @media screen and (min-width: $small-screen) {
+        padding-left: 0;
+        text-align: center;
+        white-space: nowrap;
+        width: 100%;
+        font-size: 30px;
+    }
+    @media screen and (min-width: $medium-screen) {
+        font-size: 37px;
+    }
+}
+}

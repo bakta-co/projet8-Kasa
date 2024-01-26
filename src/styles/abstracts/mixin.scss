@@ -1,0 +1,12 @@
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+@mixin typo($typo-color: $main-color) {
+    color: $typo-color;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: $font-family;
+}

@@ -1,0 +1,52 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 27px;
+    overflow: hidden;
+    .logoHeader {
+        width: 145px;
+        height: 47px; 
+        }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 47px;
+        
+    ul {
+        display: flex;
+        gap: 26px;
+        list-style: none;
+        a {
+            display: block;
+         text-decoration: none;
+         @include typo;
+         font-size: 12px;
+         &:focus {
+            text-decoration: underline;
+             }
+         }
+     }
+ }   
+}
+
+@media only screen and (max-width: 350px) {
+    .header {
+        gap: 10px;
+        nav {
+            padding: 0px;
+            ul {
+                gap: 10px;
+                a {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+
+    
