@@ -44,7 +44,8 @@
 
 .card {
     width: auto;
-    max-width: 190px;
+    max-width: 230px;
+    gap: 20px;
 }
 }
 
@@ -57,7 +58,7 @@
 
 @media only screen and (min-width: $large-screen) {
     .card {
-        width: 340px;
+        max-width: 340px;
         height: 340px;
     }
 }

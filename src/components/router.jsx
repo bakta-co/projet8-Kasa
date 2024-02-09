@@ -11,7 +11,7 @@ function Router () {
 <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/logement/:id" component={Logement} />
+                <Route path="/logement/:id" element={<Logement/>} />
                 <Route path="*" element={<Error />} />
     </Routes>
 

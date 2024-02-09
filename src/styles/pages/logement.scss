@@ -1,0 +1,135 @@
+.Logement {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding-bottom: 50px;
+
+    .Section-presentation {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @media screen and (min-width : $small-screen) {
+            flex-direction: row;
+        }
+    }
+    
+
+    .Section-title {
+        width: 100%;
+        box-sizing: border-box;
+        height: 73px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: start;
+        margin-bottom: 10px;
+        
+    .Logement-title {
+        width: 100%;
+        @include typo;
+        font-size: 18px;
+        height: 46px;
+    }
+    .Logement-location {
+        width: 100%;
+        @include typo;
+        font-size: 14px;
+        height: 22px;
+    }
+    .Logement-tag {
+        .Logement-tags {
+            display: flex;
+            padding-top: 20px;
+            margin-bottom: 50px;
+            gap:10px;
+        .tag-item{
+            width: 84px;
+            height: 18px;
+            background-color: $main-color;
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include typo(white);
+            font-size: 10px;
+        }}}
+}
+    
+        .infos {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            @media screen and (min-width : $small-screen) {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+        .Logement-rating {
+            display: flex;
+            align-items: center;
+            width: 98px;
+            font-size: 18px;
+            padding-top: 10px;
+            .filled-star {
+                color: $main-color;
+            }
+            .grey-star {
+                color: #E3E3E3;
+                
+
+            }
+        }
+        .Section-host {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        .host-name {
+            @include typo;
+            font-size: 12px;
+            width: 50px;
+            white-space: wrap;
+        }
+            .host-img {
+                border-radius: 50%;
+                height: 32px;
+            }
+        }
+}
+@media screen and (max-width : 400px) {
+    .infos {
+        margin-top: 20px;
+    }
+    .Logement-rating {
+        font-size: 13px;
+    }
+    .Section-host {
+        justify-content: end;
+        .host-img {
+            width: 50%;
+        }
+    }
+}
+@media screen and (min-width: $small-screen) {
+        .Section-infos{
+            display: flex;
+        }
+        
+    }
+    .Section-collapse {
+        display: grid;
+        gap: 20px;
+        @media screen and (min-width: $small-screen) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .Options {
+        list-style-type: none;
+
+    }
+}

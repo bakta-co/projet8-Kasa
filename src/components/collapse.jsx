@@ -1,40 +1,44 @@
-import React, { useState } from 'react';
-import data from '../about.json';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+class Collapse extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false
+        };
+    }
 
-function Collapse() {
-    const [selected, setSelected] = useState(null);
-
-    const toggle = (i) => {
-        if (selected === i) {
-            return setSelected(null);
-        }
-        setSelected(i);
+    toggle = () => {
+        this.setState((prevState) => ({
+            isOpen: !prevState.isOpen
+        }));
     };
 
-    return (
-        <div className='wrapper'>
-            <div className='collapse'>
-                {data.map((item, i)=> (
-                    <div className='item' key={i}>
-                        <div className='title' onClick={()=> toggle(i)}>
-                            <h2>{item.title}</h2>
-                            <span className='arrow'>
-                                {selected === i ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} /> } </span>
-                            
+    render() {
+        const { title, description, descriptionClassName } = this.props;
+        const { isOpen } = this.state;
+
+        return (
+            <div className='wrapper'>
+                <div className='collapse'>
+                    <div className='item'>
+                        <div className='title' onClick={this.toggle}>
+                            <h2>{title}</h2>
+                            <span className={`arrow ${isOpen ? 'open' : ''}`}>
+                                <FontAwesomeIcon icon={faChevronDown} />
+                            </span>
                         </div>
-                        <div className = {
-                            selected === i ? 'descriptionshow' : 'description'} >
-                                 {item.description}
-                                 </div>
+                        <div className={`description ${isOpen ? 'descriptionshow' : ''} ${descriptionClassName}`}>
+                            {description}
+                        </div>
                     </div>
-                ))}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Collapse;
+

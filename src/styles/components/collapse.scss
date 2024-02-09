@@ -4,17 +4,18 @@
     flex-direction: column;
     gap: 20px;
     justify-content: center;
-    align-items: center;
+    
 
     .item {
     border-radius: 5px;
     background: var(--Red, #FF6060);
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     .title {
         @include typo(white);
+        font-weight: 500;
+        padding: 5px;
         font-size: 13px;
         display: flex;
         height: 30px;
@@ -28,17 +29,30 @@
 .arrow {
     font-size: 24px;
     color: white;
+    transition: transform 0.5s ease;
 }
 
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+
 .description {
-    @include typo (white);
+    padding: 0 20px;
+    @include typo;
+    background-color: #F6F6F6;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    transition: max-height 0.5s ease; /* Utiliser max-height pour une transition fluide */
 }
 
 .descriptionshow {
-    @include typo (white);
-    height: auto;
-    transition: all 0.5s cubic-bezier(1,0,1,0);
+    /* Utiliser max-height avec une valeur suffisamment grande pour couvrir toutes les hauteurs possibles */
+    max-height: 500px; 
+    padding: 5px 20px;
+    @include typo;
+    background-color: #F6F6F6;
+    overflow: hidden; /* Ajouter overflow: hidden pour masquer le contenu supplémentaire */
+    transition: max-height 0.5s ease; /* Utiliser la même durée de transition que la classe .description */
 }
+

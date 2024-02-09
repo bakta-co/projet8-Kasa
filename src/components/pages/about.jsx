@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../banner';
 import ImageAbout from '../../IMG-about.png';
 import Data from '../../about.json';
-import Collapse from '../collapse.jsx';
+import Collapse from '../collapse';
 
 
 export default function About() {
@@ -10,7 +10,13 @@ export default function About() {
     <div className='about'>
       <Banner imageUrl={ImageAbout} />
       <div className='collapse-section'>
-        <Collapse data={Data} />
+        {Data.map((item, index) => (
+          <Collapse
+            key={index}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
       </div>
     </div>
   );
