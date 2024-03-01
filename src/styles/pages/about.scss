@@ -2,9 +2,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     .collapse-section {
+        justify-content: center;
         @media screen and (min-width : $small-screen) {
         display: flex;
         justify-content: center;

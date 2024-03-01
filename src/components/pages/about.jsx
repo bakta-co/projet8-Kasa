@@ -7,6 +7,7 @@ import Collapse from '../collapse';
 
 export default function About() {
   return (
+    
     <div className='about'>
       <Banner imageUrl={ImageAbout} />
       <div className='collapse-section'>
@@ -16,8 +17,10 @@ export default function About() {
             title={item.title}
             description={item.description}
           />
+          
         ))}
       </div>
     </div>
-  );
+    
+  )
 }

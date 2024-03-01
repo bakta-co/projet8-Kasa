@@ -1,14 +1,16 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, ScrollRestoration, Outlet} from 'react-router-dom';
 import Logements from '../../logements.json';
 import Banner from '../banner.jsx';
 import Card from '../card.jsx'; 
 import Imagehome from '../../IMG.png';
 
+
 const Home = () => {
+  
   const displayApartments = () => {
     return Logements.map((apartment) => (
-      <Link to={`/logement/${apartment.id}`} key={apartment.id}>
+      <Link to={`/logement/${apartment.id}`} key={apartment.id}  >
       <Card key={apartment.id} apartment={apartment} />
       </Link>
     ));
@@ -21,7 +23,9 @@ const Home = () => {
         {displayApartments()}
       </div>
     </div>
+     
   );
+ 
 };
 
 export default Home;

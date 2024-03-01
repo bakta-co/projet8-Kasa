@@ -23,7 +23,6 @@ const Logement = ({ match }) => {
 
   return (
     <div className='Logement'>
-      
       <Carrousel images={logement.pictures} title={logement.title} />
 
       <div className='Section-presentation'>
@@ -60,6 +59,7 @@ const Logement = ({ match }) => {
       </div>
     </div>
   );
+
 };
 
 export default Logement;
