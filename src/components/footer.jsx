@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoFooter from '../LOGO-footer.jsx'
+import LogoFooter from '../assets/images/LOGO-footer'
 
 function Footer() {
     return (

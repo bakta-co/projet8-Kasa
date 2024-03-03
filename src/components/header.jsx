@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import LogoHeader from '../LOGO-header'
+import LogoHeader from '../assets/images/LOGO-header'
 
 function Header() {
     return (

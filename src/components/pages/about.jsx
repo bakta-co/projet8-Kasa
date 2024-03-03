@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../banner';
-import ImageAbout from '../../IMG-about.png';
-import Data from '../../about.json';
+import ImageAbout from '../../assets/images/IMG-about.png';
+import Data from '../../data/about.json';
 import Collapse from '../collapse';
 
 

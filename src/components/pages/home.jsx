@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link, ScrollRestoration, Outlet} from 'react-router-dom';
-import Logements from '../../logements.json';
+import {Link} from 'react-router-dom';
+import Logements from '../../data/logements.json';
 import Banner from '../banner.jsx';
 import Card from '../card.jsx'; 
-import Imagehome from '../../IMG.png';
+import Imagehome from '../../assets/images/IMG.png';
 
 
 const Home = () => {

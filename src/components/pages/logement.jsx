@@ -1,15 +1,19 @@
 import React from 'react';
 import Carrousel from '../slider';
-import logementsData from "../../logements.json";
+import logementsData from "../../data/logements.json";
 import { useParams, Navigate } from 'react-router-dom';
 import Collapse from '../collapse';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
-const Logement = ({ match }) => {
+const Logement = () => {
   const { id }= useParams();
   const logement = logementsData.find(item => item.id === id);
+ if (!logement) {
+    return <Navigate to="*"/>;
+  }
+
   const stars = 5;
   const option =  <ul className='Options'>
   {logement.equipments.map((item, index) => (
@@ -17,9 +21,7 @@ const Logement = ({ match }) => {
   ))}
 </ul>;
 
-  if (!logement) {
-    return <Navigate to="*"/>;
-  }
+ 
 
   return (
     <div className='Logement'>

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    box-sizing:content-box;
+    box-sizing:border-box;
     @media screen and (min-width: $small-screen) {
         height: 415px;
         width: auto;
@@ -24,6 +24,7 @@
   .Slider {
     display: flex;
     width: 100%;
+    max-width: 1400px;
     
   }
   
@@ -74,7 +75,10 @@
       left: 100px;
     }
     @media screen and (min-width: $large-screen) {
-      left: 130px;
+      position: relative;
+      top: 200px;
+      left: 100px;
+      
   }
   }
   
@@ -87,6 +91,8 @@
       right: 100px;
     }
     @media screen and (min-width: $large-screen) {
-      right: 130px;
+      position: relative;
+      top: 200px;
+      right: 100px;
   }
   }   

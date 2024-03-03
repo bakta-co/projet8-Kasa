@@ -43,16 +43,15 @@
     background-color: #F6F6F6;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease; /* Utiliser max-height pour une transition fluide */
+    transition: max-height 0.5s ease; 
 }
 
 .descriptionshow {
-    /* Utiliser max-height avec une valeur suffisamment grande pour couvrir toutes les hauteurs possibles */
     max-height: 500px; 
     padding: 5px 20px;
     @include typo;
     background-color: #F6F6F6;
-    overflow: hidden; /* Ajouter overflow: hidden pour masquer le contenu supplémentaire */
-    transition: max-height 0.5s ease; /* Utiliser la même durée de transition que la classe .description */
+    overflow: hidden; 
+    transition: max-height 0.5s ease; 
 }
 
