@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import faChevronRight from "../assets/images/arrow_right.png";
+import faChevronLeft from "../assets/images/arrow_left.png";
 
 const Carrousel = ({ images, title = "" }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,22 +10,34 @@ const Carrousel = ({ images, title = "" }) => {
   };
 
   const Prev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   return (
     <div className="Carrousel">
       {images.length > 1 && (
-        <FontAwesomeIcon className="faChevronLR faChevronLeft" icon={faChevronLeft} onClick={Prev} />
+        <img
+          src={faChevronLeft}
+          className="faChevronLR faChevronLeft"
+          alt="flèche gauche"
+          onClick={Prev}
+        />
       )}
 
       {images && images.length > 0 && (
-        <div className="Slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        <div
+          className="Slider"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
           {images.map((imageUrl, index) => (
             <div key={index} className="Slide">
               <img className="ImgCarrousel" src={imageUrl} alt={title} />
               {index === currentIndex && (
-                <div className="ImageNumbering">{`${index + 1}/${images.length}`}</div>
+                <div className="ImageNumbering">{`${index + 1}/${
+                  images.length
+                }`}</div>
               )}
             </div>
           ))}
@@ -33,12 +45,15 @@ const Carrousel = ({ images, title = "" }) => {
       )}
 
       {images.length > 1 && (
-        <FontAwesomeIcon className="faChevronLR faChevronRight" icon={faChevronRight} onClick={Next} />
+        <img
+          src={faChevronRight}
+          alt="flèche droite"
+          className="faChevronLR faChevronRight"
+          onClick={Next}
+        />
       )}
     </div>
   );
 };
 
 export default Carrousel;
-
-

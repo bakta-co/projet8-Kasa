@@ -1,78 +1,91 @@
 .Error {
-    display: flex;
-    padding-top: 20px;
-    flex-direction: column;
-    align-items: center;
-    gap: 113px;
-    @include typo;
-    box-sizing: border-box;
-    margin-bottom: 113px;
-    
+  display: flex;
+  padding-top: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  @include typo;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .errorTitle {
-    display: flex;
-    width: 198px;
-    height: 99px;
-    justify-content: center;
-    font-size: 96px;
-    font-weight: 700;
+  display: flex;
+  width: 198px;
+  height: 99px;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 700;
 }
 .errorText {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    white-space: wrap;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  white-space: wrap;
 }
 
 .homeLink {
-    width: 221px;
-    font-size: 14px;
-    font-weight: 500;
-    :visited {
-        color: #FF6060;
-    }
-
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  :visited {
+    color: #ff6060;
+  }
 }
 
 @media screen and (min-width: $small-screen) and (max-width: $medium-screen) {
-    .Error {
-        width: 90%;
-        gap: 150px;
-        align-items: center;
-    }
-    .errorTitle {
-        font-size: 150px;
-    }
-    .errorText {
-        max-width: 90%;
-        font-size: 28px;
-    }
-    .homeLink {
-        font-size: 18px;
-    }
+  .Error {
+    width: 90%;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .errorTitle {
+    font-size: 80px;
+  }
+  .errorText {
+    max-width: 90%;
+    font-size: 24px;
+  }
+  .homeLink {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: $medium-screen) {
-    .Error {
-        gap: 139px;
-        margin-bottom: 139px;
-    }
-    .errorTitle {
-        font-size: 288px;    
-    }
-    .errorText {
-        width: 90%;
-        font-size: 36px;
-    }
-    .homeLink {
-        font-size: 18px;
-        white-space: nowrap;
-    }
+  .Error {
+    gap: 139px;
+    margin-bottom: 139px;
+  }
+  .errorTitle {
+    font-size: 200px;
+  }
+  .errorText {
+    width: 90%;
+    font-size: 30px;
+  }
+  .homeLink {
+    font-size: 24px;
+    white-space: nowrap;
+  }
 }
 
-@media screen and (min-width : $large-screen) {
-    .errorText {
-        white-space: nowrap;
-    }
+@media screen and (min-width: $large-screen) {
+  .Error {
+    gap: 30px;
+    margin-bottom: 139px;
+  }
+  .errorTitle {
+    font-size: 150px;
+  }
+  .errorText {
+    width: 90%;
+    font-size: 24px;
+    white-space: nowrap;
+  }
+  .homeLink {
+    font-size: 18px;
+    white-space: nowrap;
+  }
 }

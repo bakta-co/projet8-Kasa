@@ -1,37 +1,35 @@
-@import '../abstracts/variables.scss';
-@import '../abstracts/mixin.scss';
+@import "../abstracts/variables.scss";
+@import "../abstracts/mixin.scss";
 
 .footer {
-        height: 209px;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
-    
-        .logoFooter {
-            height: 40px;
-            width: 122px;
-        }
+  height: 209px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 
-        p {
-            @include typo (white);
-            text-align: center; 
-            width: 134px;
-            font-size: 12px;
-        }
-    }
+  .logoFooter {
+    height: 40px;
+    width: 122px;
+  }
 
+  p {
+    @include typo(white);
+    text-align: center;
+    width: 134px;
+    font-size: 12px;
+  }
+}
 
 @media only screen and (min-width: $medium-screen) {
-.footer {
-    gap:26px;
+  .footer {
+    gap: 26px;
     p {
-        width: 100%;
-    white-space: nowrap; 
-}
-}
-
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
 }

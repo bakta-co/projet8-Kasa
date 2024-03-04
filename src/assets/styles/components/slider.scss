@@ -1,98 +1,94 @@
 .Carrousel {
-    height: 255px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    box-sizing:border-box;
-    @media screen and (min-width: $small-screen) {
-        height: 415px;
-        width: auto;
-    }
+  height: 255px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  @media screen and (min-width: $small-screen) {
+    height: 415px;
+    width: auto;
   }
-  
-  .ImgCarrousel {
+}
+
+.ImgCarrousel {
+  position: relative;
+  object-fit: cover;
+  height: 100%;
+  min-width: 100%;
+  @media screen and (min-width: $small-screen) {
+    height: 415px;
+  }
+}
+
+.Slider {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.Slide {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+}
+
+.ImageNumbering {
+  position: absolute;
+  bottom: 20px;
+  @include typo(white);
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  @media screen and (min-width: $small-screen) {
+    visibility: visible;
+  }
+}
+
+.faChevronLR {
+  position: absolute;
+  cursor: pointer;
+  height: 40px;
+  top: 230px;
+  color: black;
+  z-index: 10;
+  @media screen and (min-width: $small-screen) {
+    top: 300px;
+    font-size: 50px;
+  }
+  @media screen and (min-width: $medium-screen) {
+    top: 300px;
+    font-size: 70px;
+  }
+}
+
+.faChevronLeft {
+  left: 40px;
+  z-index: 5;
+  @media screen and (min-width: $small-screen) {
+    left: 60px;
+  }
+  @media screen and (min-width: $medium-screen) {
+    left: 100px;
+  }
+  @media screen and (min-width: $large-screen) {
     position: relative;
-    object-fit: cover;
-    height: 100%;
-    min-width: 100%;
-    @media screen and (min-width: $small-screen) {
-      height: 415px;
-       
-    }
+    top: 200px;
+    left: 100px;
   }
-  
-  .Slider {
-    display: flex;
-    width: 100%;
-    max-width: 1400px;
-    
+}
+
+.faChevronRight {
+  right: 40px;
+  @media screen and (min-width: $small-screen) {
+    right: 60px;
   }
-  
-  .Slide {
-    min-height:100%;
-    min-width: 100%;
-    display: flex;
+  @media screen and (min-width: $medium-screen) {
+    right: 100px;
   }
-  
-  .ImageNumbering {
-    position: absolute;
-    bottom: 20px;   
-     @include typo(white);
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-    visibility: hidden;
-    @media screen and (min-width: $small-screen) {
-        visibility: visible;
-        
-    }
+  @media screen and (min-width: $large-screen) {
+    position: relative;
+    top: 200px;
+    right: 100px;
   }
-  
-  .faChevronLR {
-    position: absolute;
-    font-size: 24px;
-    cursor: pointer;
-    top: 230px;
-    color: white;
-    z-index: 10;
-    @media screen and (min-width: $small-screen) {
-      top: 300px;
-        font-size: 50px;
-    }
-    @media screen and (min-width: $medium-screen) {
-      top: 300px;
-        font-size: 70px;
-    }
-  }
-  
-  .faChevronLeft {
-    left: 40px;
-    z-index: 5;
-    @media screen and (min-width: $small-screen) {
-        left: 60px;
-    }
-    @media screen and (min-width: $medium-screen) {
-      left: 100px;
-    }
-    @media screen and (min-width: $large-screen) {
-      position: relative;
-      top: 200px;
-      left: 100px;
-      
-  }
-  }
-  
-  .faChevronRight {
-    right: 40px;
-    @media screen and (min-width: $small-screen) {
-        right: 60px;
-    }
-    @media screen and (min-width: $medium-screen) {
-      right: 100px;
-    }
-    @media screen and (min-width: $large-screen) {
-      position: relative;
-      top: 200px;
-      right: 100px;
-  }
-  }   
+}

@@ -1,57 +1,55 @@
 .collapse {
-    width: 100%;
-    display:flex ;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 
-    .item {
+  .item {
     border-radius: 5px;
-    background: var(--Red, #FF6060);
+    background: var(--Red, #ff6060);
     display: flex;
     flex-direction: column;
     justify-content: center;
     .title {
-        @include typo(white);
-        font-weight: 500;
-        padding: 5px;
-        font-size: 13px;
-        display: flex;
-        height: 30px;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
+      @include typo(white);
+      font-weight: 500;
+      padding: 5px;
+      font-size: 13px;
+      display: flex;
+      height: 30px;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
     }
-    }
+  }
 }
 
 .arrow {
-    font-size: 24px;
-    color: white;
-    transition: transform 0.5s ease;
+  font-size: 24px;
+  z-index: 10;
+  transition: transform 0.5s ease;
 }
 
 .arrow.open {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-
 .description {
-    padding: 0 20px;
-    @include typo;
-    background-color: #F6F6F6;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease; 
+  padding: 0 20px;
+  @include typo;
+  background-color: #f6f6f6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
 .descriptionshow {
-    max-height: 500px; 
-    padding: 5px 20px;
-    @include typo;
-    background-color: #F6F6F6;
-    overflow: hidden; 
-    transition: max-height 0.5s ease; 
+  max-height: 500px;
+  padding: 5px 20px;
+  font-size: 14px;
+  @include typo;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
-
